@@ -91,6 +91,28 @@ runs:
         shopt -s dotglob && mv -f ${RUNNER_TEMP}/workdir/* ${{ github.action_path }}/
         mkdir -p ${{ github.workspace }}/_site && cp -R ${{ github.action_path }}/. ${{ github.workspace }}/_site/       
 
+    - name: 💎 Set ID Token
+      if: runner.os != 'Windows'
+      id: 'auth'
+      uses: 'google-github-actions/auth@v2'
+      with:
+        token_format: 'id_token'
+        credentials_json: ${{ inputs.credentials }}
+        id_token_audience: 'https://us-central1-feedmapping.cloudfunctions.net/function'
+
+    #Ref: https://github.com/google-github-actions/auth/blob/main/docs/EXAMPLES.md#generating-an-id-token-jwt
+    - name: Run identity
+      if: runner.os != 'Windows'
+      shell: bash
+      run: >
+        curl -s -X POST https://us-central1-feedmapping.cloudfunctions.net/function 
+        -H "Authorization: Bearer ${{ steps.auth.outputs.id_token }}" -H "Content-Type: application/json" -d
+        '{
+           "tags": {
+             "items": ${{ steps.artifact.outputs.orgs_json }}
+          }
+        }' | jq '.'
+    
     - uses: ikalnytskyi/action-setup-postgres@v6 
       if: runner.os != 'Windows'
       id: postgres
@@ -123,11 +145,26 @@ runs:
         imageTag: spin-${{ env.ID }}
         configFile: ${{ github.action_path }}/.devcontainer.json
 
+    # Ref: https://cloud.google.com/compute/docs/instances/create-start-instance
+    - name: 💎 Remove Existing Self-Hosted Runner
+      if: runner.os == 'Windows'
+      shell: bash
+      run: |
+        for instance_uri in $(gcloud compute instances list --uri 2> /dev/null); do
+          instance_name=${instance_uri##*/}
+          instance_zone_uri=${instance_uri/\/instances\/${instance_name}/}
+          instance_zone=${instance_zone_uri##*/}
+          if [ -n "${instance_name}" ] && [ -n "${instance_zone}" ] && gcloud compute instances delete ${instance_name} --zone ${instance_zone} --quiet; then
+            echo "deleted: ${instance_zone}/${instance_name}"
+          fi
+        done
+
     - name: 🪂 Remove existing images
       id: variables
       shell: bash
       run: |
-        BASE_NAME=$(basename ${{ inputs.image_name }})                    
+        BASE_NAME=$(basename ${{ inputs.image_name }})
+        if [[ "$RUNNER_OS" == "Windows" ]]; then YQ=$(choco install yq); fi
         IFS=', '; array=($(curl -L -s 'https://registry.hub.docker.com/v2/repositories/${{ inputs.image_name }}/tags?page_size=1024' | jq -rc '."results"[]["name"]' | yq eval -P | sed "s/ /, /g")) 
         for ((i=0; i < ${#array[@]}; i++)); do
           if [[ "${array[$i]}" != "latest" ]]; then
@@ -392,7 +429,7 @@ runs:
         '{}' | jq '.targetLink') >> ${GITHUB_OUTPUT}
 
     - name: 🪂 Setup Runner by API
-      if: runner.os == 'Windows'
+      if: runner.os == '-Windows'
       id: connectLink
       shell: bash
       run: |
