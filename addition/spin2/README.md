@@ -7,10 +7,16 @@ description:
 ---
 # Primes Platform
 
+We analyze the inference process of dynamic and observe that the dynamic tensor shapes and control flow hinder by prime numbers
 
 {% include list.liquid all=true %}
 
-[Prime hexagon](https://www.hexspin.com/) is a mathematical structure developed by mathematician T. Gallion that is formed when integers are sequentially added to a field of tessellating equilateral triangles, where the path of the integers is changed whenever a prime is encountered.
+See [this paper](https://github.com/user-attachments/files/17277693/s11390-021-1161-y.pdf) for a discussion of the challenges imposed by dynamic shapes and one project's approach to addressing them.
+
+## Dynamic Shapes
+
+[Prime hexagon](https://youtu.be/fQL4KRH3wUQ) is a mathematical structure that is formed when integers are sequentially added to a field of tessellating equilateral triangles
+
 
 ```note
 This is not easy as they are linked to the nature of prime numbers, and nothing is easy about the nature of prime numbers.  But I begin with this assumption: if the hexagons participate in the Universe in any way other than haphazardly, they must be demonstrably ***congruent to something organized*** _([T. Gallion](https://www.hexspin.com/minor-hexagons/))_.
@@ -31,9 +37,21 @@ s p i n
 19 1 1 1 ◄--- 8th prime
 ```
 
+The program used to demonstrate functions of dynamic shapes where the path of the integers is changed whenever a prime is encountered.
+
+```note
+- Create a program that includes dynamic shapes in program inputs and outputs
+- Import that program into IREE's compiler
+- Compile that program to an IREE VM bytecode module
+- Load the compiled program using IREE's high level runtime C API
+- Call exported functions on the loaded program
+```
+
 ***17 = 7th prime = (18 - 11) th prime***
 
-![](https://user-images.githubusercontent.com/8466209/226643815-f8c926cd-ae36-43d3-b271-8df07272f429.png)
+[![Prime hexagon](https://user-images.githubusercontent.com/8466209/226643815-f8c926cd-ae36-43d3-b271-8df07272f429.png)](https://youtu.be/fQL4KRH3wUQ)
+
+To match the different shape, we will need a common shape, and the result is a two-dimensional array. This would later be multilinear dimensions.
 
 ```txt
 p r i m e s
@@ -51,9 +69,15 @@ p r i m e s
 11 23 2 1 1 23 ◄--- 9th prime √
 ```
 
-## Residual objects
-
 You may learn that sets of algebraic objects has a multilinear relationship related to a vector space called _[tensor](https://en.wikipedia.org/wiki/Tensor)_. Tensors may map between different objects such as vectors, scalars, and even other tensors.
+
+```note
+Tensors are multi-dimensional arrays with a uniform type (e.g. int32, float32) and a shape. Shapes consist of a rank and a list of dimensions and may be static (i.e. fully known and fixed) or varying degrees of dynamic. See these references:
+- PyTorch: [Compiler dynamic shapes](https://pytorch.org/docs/stable/torch.compiler_dynamic_shapes.html), [torch.Tensor](https://pytorch.org/docs/stable/tensors.html)
+- TensorFlow: [Introduction to Tensors](https://www.tensorflow.org/guide/tensor)
+
+All tensors are immutable like Python numbers and strings: you can never update the contents of a tensor, only create a new one. [Dynamic shapes](https://github.com/iree-org/iree/tree/main/samples/dynamic_shapes) are useful for passing variable sized batches as input, receiving variable length sentences of text as output.
+```
 
 [![300px-Components_stress_tensor svg](https://user-images.githubusercontent.com/8466209/211590875-9cae3c47-bbdc-43d8-acc5-d8c64c802967.png)](https://en.wikipedia.org/wiki/Tensor)
 
@@ -107,6 +131,21 @@ The tessellating field of equilateral triangles fills with numbers, with spin or
 ***π(6+11) = π(17) = 7***
 
 ![](https://user-images.githubusercontent.com/36441664/274093531-0878e3e5-6be3-448e-9ad4-3b34523c1e9c.jpg)
+
+It can generate an on-line documentation browser (in HTML) and/or an off-line reference manual (in LaTeX) from a set of documented source files such as _[Doxygen](https://www.doxygen.nl/manual/index.html)_.
+
+```note
+Many scientific communities have adopted community-based models that integrate multiple components to simulate whole system dynamics.
+- The community software projects’ complexity, stems from the integration of multiple individual software components that were developed under different application requirements and various machine architectures, has become a challenge for effective software system understanding and continuous software development.
+- The paper presents an integrated software toolkit called X-ray Software Scanner (in abbreviation, XScan) for a better understanding of large-scale community-based scientific codes.
+- Our software tool provides support to quickly summarize the overall information of scientific codes, including the number of lines of code, programming languages, external library dependencies, as well as architecture-dependent parallel software features.
+- The XScan toolkit also realizes a static software analysis component to collect detailed structural information and provides an interactive visualization and analysis of the functions.
+
+We use a large-scale community-based Earth System Model to demonstrate the workflow, functions and visualization of the toolkit. We also discuss the application of advanced graph analytics techniques to assist software modular design and component refactoring. _([ResearchGate](https://www.researchgate.net/publication/333664805_XScan_An_Integrated_Tool_for_Understanding_Open_Source_Community-Based_Scientific_Code))_
+```
+
+[![doxygen](https://github.com/user-attachments/assets/824735b6-a27d-4470-9835-8162e5561369)](https://github.com/user-attachments/files/17319976/ICCS2019-17.pdf)
+
 
 ## Central Polarity
 
