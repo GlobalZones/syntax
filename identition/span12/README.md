@@ -2507,6 +2507,18 @@ The mathematical balancing and resolution of this domain, which correlates with 
 [![Theory of Everything](https://github.com/eq19/maps/assets/8466209/6e26ada0-c545-4771-810b-9f721512a03c)](https://www.primesdemystified.com/Factorization.html)
 
 Current research on loop quantum gravity may eventually play a fundamental role in a [theory of everything](https://en.wikipedia.org/wiki/Theory_of_everything), _but that is not its primary aim_.
+## Simplified TOE
+
+Assigning a specific mass, length, time, and charge metrics based on new dimensional relationships and the Planck constant (which defines Higgs mass).
+
+```tip
+{{ site.github.latest_release.body }}
+```
+
+[![Quantum Gravity](https://github.com/eq19/maps/assets/8466209/aefae6d5-9ff0-4155-b990-00b2335ae425)](https://www.eq19.com/identition/#beyond-the-139)
+
+Taking a [coupling function](https://www.eq19.com/multiplication/20.html#build-coupling-runner) between f(π) as P vs f(i) as NP where e<sup>iπ</sup> + 1 = 0 they shall be correlated in to an expression of universe so it shows that _[Everything is Connected](https://www.eq19.com/identition/span11/)_.
+
 ## Final Theory
 
 There is a proof that it is [impossible](https://en.wikipedia.org/wiki/An_Exceptionally_Simple_Theory_of_Everything) to embed all the three generations  in E8 without the presence of additional particles that do not exist in the physical world.
@@ -2694,15 +2706,6 @@ We've seen how it [Euler's identity] can easily be deduced from results of Johan
 [![Everything is Connected](https://github.com/eq19/maps/assets/8466209/830328bc-7061-4851-b89d-4ee27bafef9c)](https://youtu.be/rPh3c8Sa37M)
 
 Since the 27 pattern is tripled to modulo 90 so they would behave as Prime Spiral Sieve and synchronizing its period-24 digital root towards the rest of 77 objects.
-
-
-```tip
-{{ site.github.latest_release.body }}
-```
-
-[![Quantum Gravity](https://github.com/eq19/maps/assets/8466209/aefae6d5-9ff0-4155-b990-00b2335ae425)](https://www.eq19.com/identition/#beyond-the-139)
-
-Taking a [coupling function](https://www.eq19.com/multiplication/20.html#build-coupling-runner) between f(π) as P vs f(i) as NP where e<sup>iπ</sup> + 1 = 0 they shall be correlated in to an expression of universe so it shows that _[Everything is Connected](https://www.eq19.com/identition/span11/)_.
 
 ## Disclaimer
 
