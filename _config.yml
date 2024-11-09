@@ -3,7 +3,7 @@ user: eq19
 span: span11
 title: eQuantum
 repository: Chetabahana/Chetabahana.github.io
-action: eq19/grammar/actions/runs/11653326218
+action: eq19/grammar/actions/runs/11755883098
 description: 
 
 #debug:
@@ -26,6 +26,7 @@ readme_index:
   with_frontmatter: true
 
 exclude:
+  - vendor
   - LICENSE
   - action.yml  
   - Dockerfile
