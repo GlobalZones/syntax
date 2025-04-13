@@ -3,7 +3,7 @@ user: eq19
 span: span11
 title: eQuantum
 repository: Chetabahana/Chetabahana.github.io
-action: eq19/grammar/actions/runs/12093094780
+action: eq19/grammar/actions/runs/14426605473
 description: 
 
 #debug:
@@ -14,6 +14,7 @@ description:
 lsi: false
 incremental: true
 highlighter: rouge
+plugins_dir: _plugins
 
 gist:
   noscript: false
