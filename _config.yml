@@ -1,10 +1,10 @@
-id: 43
+id: 44
 user: eq19
-span: span-24
+span: span-25
 title: eQuantum
-baseurl: /lexer
-repository: GlobalZones/lexer
-action: GlobalZones/feed/actions/runs/14624669818
+baseurl: /parser
+repository: GlobalZones/parser
+action: GlobalZones/lexer/actions/runs/14629239037
 description: ₠Quantum Project
 
 #debug:
@@ -48,6 +48,6 @@ plugins:
   - jekyll-optional-front-matter
 
 track:
-  spin: [3, 3]
+  spin: [3, 4]
   pinned: [maps, feed, lexer, parser, syntax, grammar, rapidjson, ventoy, magisk, duckdb, ci, templates]
   organization: [Chetabahana, FeedMapping, GlobalZones, HybridModels, JunctionTerms, KernelPatterns, MappingSystem, NeuralSystem, ObjectModules, VirtualNetworks, WeakNegative, WeakPositive, ZeroWeak]
