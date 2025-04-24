@@ -164,6 +164,13 @@ runs:
             git add .
             git commit --allow-empty -m "Update GitHub workflows and configurations"
             git push origin v0
+
+            #Change the setting of default brance
+            curl -s -X PATCH \
+              -H "Authorization: token $GH_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              https://api.github.com/repos/$TARGET_REPOSITORY \
+              -d '{"default_branch":"v0"}' > /dev/null
             echo "Created v0 branch and set it as default"
           else
             echo "Branches with 'v' suffix already exist"
