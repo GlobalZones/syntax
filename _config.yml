@@ -1,11 +1,11 @@
-id: 7
+id: 44
 user: eq19
-span: span12
+span: span-25
 title: eQuantum
-baseurl: /grammar
-repository: eq19/grammar
-action: eq19/syntax/actions/runs/11646049596
-description: An attempt to discover the Final Theory
+baseurl: /parser
+repository: GlobalZones/parser
+action: GlobalZones/lexer/actions/runs/14629239037
+description: ₠Quantum Project
 
 #debug:
 #  dist: false
@@ -15,6 +15,7 @@ description: An attempt to discover the Final Theory
 lsi: false
 incremental: true
 highlighter: rouge
+plugins_dir: _plugins
 
 gist:
   noscript: false
@@ -28,6 +29,7 @@ readme_index:
 
 exclude:
   - LICENSE
+  - vendor/
   - action.yml  
   - Dockerfile
 
@@ -46,6 +48,6 @@ plugins:
   - jekyll-optional-front-matter
 
 track:
-  spin: [0, 6]
-  pinned: [maps, feed, lexer, parser, syntax, grammar]
+  spin: [3, 4]
+  pinned: [maps, feed, lexer, parser, syntax, grammar, rapidjson, ventoy, magisk, duckdb, ci, templates]
   organization: [Chetabahana, FeedMapping, GlobalZones, HybridModels, JunctionTerms, KernelPatterns, MappingSystem, NeuralSystem, ObjectModules, VirtualNetworks, WeakNegative, WeakPositive, ZeroWeak]

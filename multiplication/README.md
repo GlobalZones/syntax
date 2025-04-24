@@ -69,6 +69,17 @@ They are used to determine critical points where an asset's momentum is likely t
 
 ## Lineage Retracement
 
+The preliminary basis having these properties that is used consists of [the generalized Gell–Mann matrices](https://mathworld.wolfram.com/GeneralizedGell-MannMatrix.html) according to the convention in [Bloch Vectors - pdf](https://github.com/user-attachments/files/18002214/0806.1174v1.pdf).
+
+
+```note
+Integration of ordinary and stochastic master equations is performed on density operators parametrized by 𝑑² real numbers, where 𝑑 is the dimension of the system Hilbert space.
+- These are the components of the density operator as a vector in a basis that is Hermitian and, excepting the identity, traceless.
+- Since the ordinary and [stochastic master equations - pdf](https://github.com/user-attachments/files/17985754/1507.07016v2.pdf) under consideration are trace preserving, one could neglect the basis element corresponding to the identity.
+
+But as the module currently stands it is included to simplify some expressions and provide a simple test to make sure calculations are proceeding as they ought to. _([PySME-pdf](https://github.com/user-attachments/files/17985617/pysme-readthedocs-io-en-latest.pdf))_
+```
+
 ```txt
  Osp(8|4) |  1 |  2 |  3 |   4 | th
 ==========+====+====+====+=====+====
@@ -153,7 +164,9 @@ W.D. Gann: “Stocks make important changes in trend every ***30, 60, 120, 150, 
 
 ## The Interchange Layers
 
-```
+[![The Four Fundamental Forces](https://github.com/user-attachments/assets/731865b0-7033-4e1b-a587-0c75c0dcae36)](https://www.eq19.com/#prime-unit-identity)
+
+```note
 That is, if the powers of 10 all returned with blue spin, or as a series of rainbows, or evenly alternating colors or other non-random results, ***then I’d say prime numbers appear to have a linkage to 10.  I may not know what the the linkage is, just that it appears to exist*** _([HexSpin](https://www.hexspin.com/minor-hexagons/))_.
 ```
 
