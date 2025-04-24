@@ -1,0 +1,25 @@
+current directory: D:/a/parser/parser/vendor/bundle/ruby/3.3.0/gems/json-2.10.2/ext/json/ext/parser
+C:/hostedtoolcache/windows/Ruby/3.3.4/x64/bin/ruby.exe extconf.rb
+checking for rb_enc_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for rb_category_warn() in ruby.h... yes
+checking for strnlen() in string.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: D:/a/parser/parser/vendor/bundle/ruby/3.3.0/gems/json-2.10.2/ext/json/ext/parser
+make.exe DESTDIR\= sitearchdir\=./.gem.20250424-6420-wzntjj sitelibdir\=./.gem.20250424-6420-wzntjj clean
+
+current directory: D:/a/parser/parser/vendor/bundle/ruby/3.3.0/gems/json-2.10.2/ext/json/ext/parser
+make.exe DESTDIR\= sitearchdir\=./.gem.20250424-6420-wzntjj sitelibdir\=./.gem.20250424-6420-wzntjj
+generating parser-x64-mingw-ucrt.def
+compiling parser.c
+linking shared-object json/ext/parser.so
+
+current directory: D:/a/parser/parser/vendor/bundle/ruby/3.3.0/gems/json-2.10.2/ext/json/ext/parser
+make.exe DESTDIR\= sitearchdir\=./.gem.20250424-6420-wzntjj sitelibdir\=./.gem.20250424-6420-wzntjj install
+/usr/bin/install -c -m 0755 parser.so ./.gem.20250424-6420-wzntjj/json/ext
+
+current directory: D:/a/parser/parser/vendor/bundle/ruby/3.3.0/gems/json-2.10.2/ext/json/ext/parser
+make.exe DESTDIR\= sitearchdir\=./.gem.20250424-6420-wzntjj sitelibdir\=./.gem.20250424-6420-wzntjj clean

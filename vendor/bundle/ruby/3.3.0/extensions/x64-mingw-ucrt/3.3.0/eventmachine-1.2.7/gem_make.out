@@ -1,0 +1,20 @@
+current directory: D:/a/parser/parser/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+C:/hostedtoolcache/windows/Ruby/3.3.4/x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: D:/a/parser/parser/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make.exe DESTDIR\= sitearchdir\=./.gem.20250424-6420-tjxdj2 sitelibdir\=./.gem.20250424-6420-tjxdj2 clean
+
+current directory: D:/a/parser/parser/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make.exe DESTDIR\= sitearchdir\=./.gem.20250424-6420-tjxdj2 sitelibdir\=./.gem.20250424-6420-tjxdj2
+generating fastfilereaderext-x64-mingw-ucrt.def
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.so
+
+current directory: D:/a/parser/parser/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make.exe DESTDIR\= sitearchdir\=./.gem.20250424-6420-tjxdj2 sitelibdir\=./.gem.20250424-6420-tjxdj2 install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20250424-6420-tjxdj2
+
+current directory: D:/a/parser/parser/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make.exe DESTDIR\= sitearchdir\=./.gem.20250424-6420-tjxdj2 sitelibdir\=./.gem.20250424-6420-tjxdj2 clean
