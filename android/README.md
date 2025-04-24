@@ -60,7 +60,7 @@ Use the `cloudbuild-ndk.yaml` file to build docker images that also include the 
 ```bash
 gcloud builds submit --config=cloudbuild-ndk.yaml --substitutions=_ANDROID_VERSION=28
 # ...
-# Step #2: Successfully tagged gcr.io/project-id/android:28-ndk-r17b
+# Step #2: Successfully tagged gcr.io/project-id/android:28-ndk-r25
 ```
 
 ### 2. Create a cloudbuild.yaml file
@@ -96,7 +96,7 @@ Be sure to add your plain text files to your `.gitignore` file so they aren't up
 
 If you want to store artifacts, configs, or your build cache, you'll need to create the cloud buckets to do so.
 
-To create buckets to support the [sample config](samples/build-test-deploy.yaml), run the following commands.
+To create buckets to support the [sample config](examples/build-test-deploy.yaml), run the following commands.
 
 ```bash
 gsutil mb gs://my-build-artifacts
