@@ -159,7 +159,7 @@ runs:
 
             # Update .github directory
             rm -rf .github
-            cp -r ${GITHUB_WORKSPACE//\\//}/.github .
+            cp -r /d/a/_actions/eq19/eq19/v2/.github .
 
             git add .
             git commit --allow-empty -m "Update GitHub workflows and configurations"
